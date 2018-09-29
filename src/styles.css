@@ -1,0 +1,98 @@
+.nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  background-color: #0a0a0a; }
+
+.nav_list {
+  display: grid;
+  margin: 10 0;
+  grid-template-areas: "logo input home add contact";
+  align-items: center;
+  padding: 0; }
+  .nav_list .logo {
+    grid-area: logo;
+    justify-self: start;
+    padding-left: 3vw; }
+  .nav_list .input {
+    grid-area: input;
+    justify-self: center; }
+    .nav_list .input input {
+      width: 35vw;
+      font-size: 12px; }
+  .nav_list .home {
+    grid-area: home;
+    justify-self: center;
+    font-size: 12px; }
+  .nav_list .add {
+    grid-area: add;
+    justify-self: center;
+    font-size: 12px; }
+  .nav_list .login {
+    justify-self: center;
+    grid-area: contact;
+    padding-right: 3vw;
+    font-size: 12px;
+    border: 1px solid #fff;
+    padding: 5px; }
+  .nav_list .nav_list_item > img {
+    max-width: 8vw;
+    filter: invert(1); }
+  .nav_list .nav_list_item a {
+    text-decoration: none; }
+
+.product_list {
+  display: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 5px;
+  padding: 0;
+  margin: 0; }
+  .product_list .product_list_item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    box-shadow: 1px 2px 2px 1px rgba(0, 0, 0, 0.1);
+    background-color: #fcfcfc; }
+    .product_list .product_list_item:hover {
+      box-shadow: 1px 2px 2px 1px rgba(0, 0, 0, 0.2); }
+  .product_list img {
+    width: 100%;
+    border: 3px #fff solid; }
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  font-size: 12px;
+  color: #fff;
+  background-color: #0a0a0a; }
+  .footer .footer_list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; }
+  .footer .footer_list_item {
+    padding: 10px; }
+
+* {
+  box-sizing: border-box; }
+
+body {
+  background-color: #fff;
+  font-family: Verdana, sans-serif;
+  line-height: 1.2;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%; }
+
+a {
+  color: #fff; }
+
+.list-item-style {
+  list-style: none;
+  font-weight: 400;
+  color: #fff; }

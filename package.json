@@ -1,0 +1,16 @@
+{
+  "name": "bike_shop",
+  "version": "1.0.0",
+  "description": "Bike Shop",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w sass/ -o src/ --recursive"
+  },
+  "keywords": [],
+  "author": "Andrei Constantinescu",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^4.9.3"
+  },
+  "devDependencies": {}
+}

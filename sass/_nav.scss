@@ -1,0 +1,65 @@
+@import '_variables';
+
+.nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    background-color: $main-dark-color;
+}
+
+.nav_list {
+    display: grid;
+    margin: 10 0;
+    grid-template-areas: 
+    "logo input home add contact";
+    align-items: center;
+    padding: 0;
+
+    .logo {
+        grid-area: logo;
+        justify-self: start;
+        padding-left: 3vw;
+    }
+
+    .input {
+        grid-area: input;
+        justify-self: center;
+        input {
+            width: 35vw;
+            font-size: $main-font-size;
+        }
+    }
+
+    .home {
+        grid-area: home;
+        justify-self: center;
+        font-size: $main-font-size;
+    }
+
+    .add {
+        grid-area: add;
+        justify-self: center;
+        font-size: $main-font-size;
+    }
+
+    .login {
+        justify-self: center;
+        grid-area: contact;
+        padding-right: 3vw;
+        font-size: $main-font-size;
+        border: 1px solid $main-light-color;
+        padding: 5px;
+    }
+    .nav_list_item {
+        & > img {
+            max-width: 8vw;
+            filter: invert(1);
+        }
+
+        a {
+            text-decoration: none;
+        }
+    }
+}
+

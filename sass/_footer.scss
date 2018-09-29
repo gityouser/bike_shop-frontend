@@ -1,0 +1,20 @@
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    font-size: $main-font-size;
+    color: $main-light-color;
+    background-color: $main-dark-color;
+    
+    .footer_list {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    
+    .footer_list_item {
+        padding: 10px;
+    }
+}
+

@@ -1,0 +1,30 @@
+@import '_variables';
+@import 'nav';
+@import 'main';
+@import '_footer';
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #fff;
+    font-family: Verdana, sans-serif;
+    line-height: 1.2; 
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+a {
+    color: $main-light-color;
+}
+
+.list-item-style {
+    list-style: none;
+    font-weight: 400;
+    color: $main-light-color;
+}
+
+
