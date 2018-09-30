@@ -21,7 +21,9 @@
     </header>
 
     <main id="main">
-        <ul class="product_list"></ul>
+        <div class="product_list_wrapper">
+         <ul class="product_list"></ul>
+        </div>
     </main>
 
     <footer class="footer">
@@ -31,18 +33,30 @@
         </ul>
     </footer>
     <template id="login_template">
-        <div class="login_container">
-            <div class="login_wrapper">
+        <div class="form_container login_container">
+            <div class="form_wrapper login_wrapper">
                 <h1>Please Identify Yourself</h1>
-    
-                <form class="login_form" action="" method="post"> 
-                    <input type="text" name="username" id="username" placeholder="username">
-                    <input type="password" name="password" id="password" placeholder="password">
-                    <input type="submit" name="login" value="Log In">
-                    <div class="login_form_actions">
-                        
-                        Not registered? <a href="#">Create an account</a>
+                <form class="login_form"> 
+                    <input type="text" id="username" placeholder="username">
+                    <input type="password" id="password" placeholder="password">
+                    <input type="submit" value="Log In">
+                    <div class="login_register_wrapper">       
+                        Not registered? <a class="login_register_btn" href="#">Create an account</a>
                     </div>
+                </form>
+            </div>
+        </div>
+    </template>
+    <template id="signup_template">
+        <div class="form_container signup_container">
+            <div class="form_wrapper signup_wrapper">
+                <h1>Sign Up</h1>
+                <form class="signup_form"> 
+                    <input type="text" id="firstname" placeholder="firstname">
+                    <input type="text" id="lastname" placeholder="lastname">
+                    <input type="email" id="email" placeholder="email">
+                    <input type="password" id="password" placeholder="password">
+                    <input type="submit" value="Sign Up">
                 </form>
             </div>
         </div>

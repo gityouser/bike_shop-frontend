@@ -1,0 +1,48 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/Users/andreiconstantinescu/.nvm/versions/node/v6.14.4/bin/node',
+1 verbose cli   '/Users/andreiconstantinescu/.nvm/versions/node/v6.14.4/bin/npm',
+1 verbose cli   'run',
+1 verbose cli   'sass' ]
+2 info using npm@3.10.10
+3 info using node@v6.14.4
+4 verbose run-script [ 'presass', 'sass', 'postsass' ]
+5 info lifecycle bike_shop@1.0.0~presass: bike_shop@1.0.0
+6 silly lifecycle bike_shop@1.0.0~presass: no script for presass, continuing
+7 info lifecycle bike_shop@1.0.0~sass: bike_shop@1.0.0
+8 verbose lifecycle bike_shop@1.0.0~sass: unsafe-perm in lifecycle true
+9 verbose lifecycle bike_shop@1.0.0~sass: PATH: /Users/andreiconstantinescu/.nvm/versions/node/v6.14.4/lib/node_modules/npm/bin/node-gyp-bin:/Users/andreiconstantinescu/Desktop/sandbox/bike_shop/node_modules/.bin:/Users/andreiconstantinescu/.nvm/versions/node/v6.14.4/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/andreiconstantinescu/Documents/GIT-NC/apache-maven-3.5.3/bin
+10 verbose lifecycle bike_shop@1.0.0~sass: CWD: /Users/andreiconstantinescu/Desktop/sandbox/bike_shop
+11 silly lifecycle bike_shop@1.0.0~sass: Args: [ '-c', 'node-sass -w sass/ -o src/ -r' ]
+12 silly lifecycle bike_shop@1.0.0~sass: Returned: code: 1  signal: null
+13 info lifecycle bike_shop@1.0.0~sass: Failed to exec sass script
+14 verbose stack Error: bike_shop@1.0.0 sass: `node-sass -w sass/ -o src/ -r`
+14 verbose stack Exit status 1
+14 verbose stack     at EventEmitter.<anonymous> (/Users/andreiconstantinescu/.nvm/versions/node/v6.14.4/lib/node_modules/npm/lib/utils/lifecycle.js:255:16)
+14 verbose stack     at emitTwo (events.js:106:13)
+14 verbose stack     at EventEmitter.emit (events.js:191:7)
+14 verbose stack     at ChildProcess.<anonymous> (/Users/andreiconstantinescu/.nvm/versions/node/v6.14.4/lib/node_modules/npm/lib/utils/spawn.js:40:14)
+14 verbose stack     at emitTwo (events.js:106:13)
+14 verbose stack     at ChildProcess.emit (events.js:191:7)
+14 verbose stack     at maybeClose (internal/child_process.js:920:16)
+14 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:230:5)
+15 verbose pkgid bike_shop@1.0.0
+16 verbose cwd /Users/andreiconstantinescu/Desktop/sandbox/bike_shop
+17 error Darwin 18.0.0
+18 error argv "/Users/andreiconstantinescu/.nvm/versions/node/v6.14.4/bin/node" "/Users/andreiconstantinescu/.nvm/versions/node/v6.14.4/bin/npm" "run" "sass"
+19 error node v6.14.4
+20 error npm  v3.10.10
+21 error code ELIFECYCLE
+22 error bike_shop@1.0.0 sass: `node-sass -w sass/ -o src/ -r`
+22 error Exit status 1
+23 error Failed at the bike_shop@1.0.0 sass script 'node-sass -w sass/ -o src/ -r'.
+23 error Make sure you have the latest version of node.js and npm installed.
+23 error If you do, this is most likely a problem with the bike_shop package,
+23 error not with npm itself.
+23 error Tell the author that this fails on your system:
+23 error     node-sass -w sass/ -o src/ -r
+23 error You can get information on how to open an issue for this project with:
+23 error     npm bugs bike_shop
+23 error Or if that isn't available, you can get their info via:
+23 error     npm owner ls bike_shop
+23 error There is likely additional logging output above.
+24 verbose exit [ 1, true ]

@@ -42,8 +42,14 @@
   .nav_list .nav_list_item a {
     text-decoration: none; }
 
+#main {
+  position: fixed; }
+
+.product_list_wrapper {
+  overflow-y: scroll;
+  height: 100%; }
+
 .product_list {
-  width: 100%;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-gap: 7px;
@@ -77,10 +83,6 @@
       overflow: hidden;
       white-space: nowrap; }
 
-@media only screen and (max-width: 600px) {
-  .product_list {
-    grid-template-columns: repeat(2, 1fr); } }
-
 .footer {
   position: fixed;
   bottom: 0;
@@ -96,8 +98,103 @@
   .footer .footer_list_item {
     padding: 10px; }
 
+.login_container {
+  width: 100vw;
+  height: 100%;
+  position: relative;
+  top: 0px;
+  bottom: 0px;
+  z-index: 100;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: 1fr 2fr 1fr;
+  grid-template-areas: ". . ." ". wrapper ." ". . ."; }
+  .login_container .login_wrapper {
+    justify-self: center;
+    grid-area: wrapper;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 1px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    padding: 0  40px;
+    background-color: #fafafa; }
+    .login_container .login_wrapper > h1 {
+      grid-area: h1;
+      font-size: 20px;
+      font-weight: 600; }
+    .login_container .login_wrapper .login_form {
+      display: flex;
+      flex-direction: column;
+      width: 300px;
+      display: flex; }
+    .login_container .login_wrapper .login_form input {
+      width: 90vw;
+      width: 300px;
+      height: 40px;
+      margin-bottom: 5px; }
+    .login_container .login_wrapper .login_form input[type="text"], .login_container .login_wrapper input[type="password"] {
+      padding: 10px; }
+    .login_container .login_wrapper .login_form input[type="submit"] {
+      font-size: 12px;
+      font-weight: 600;
+      background-color: #01FF70; }
+    .login_container .login_wrapper .login_register_btn {
+      color: #2ECC40; }
+
+.signup_container {
+  width: 100vw;
+  height: 100%;
+  position: relative;
+  top: 0px;
+  bottom: 0px;
+  z-index: 100;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: 1fr 2fr 1fr;
+  grid-template-areas: ". . ." ". wrapper ." ". . ."; }
+  .signup_container .signup_wrapper {
+    justify-self: center;
+    grid-area: wrapper;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 1px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    padding: 0  40px;
+    background-color: #fafafa; }
+    .signup_container .signup_wrapper > h1 {
+      grid-area: h1;
+      font-size: 20px;
+      font-weight: 600; }
+    .signup_container .signup_wrapper .signup_form {
+      display: flex;
+      flex-direction: column;
+      width: 300px;
+      display: flex; }
+    .signup_container .signup_wrapper .signup_form input {
+      width: 90vw;
+      width: 300px;
+      height: 40px;
+      margin-bottom: 5px; }
+    .signup_container .signup_wrapper .signup_form input[type="text"], .signup_container .signup_wrapper input[type="password"], .signup_container .signup_wrapper input[type="email"] {
+      padding: 10px; }
+    .signup_container .signup_wrapper .signup_form input[type="submit"] {
+      font-size: 12px;
+      font-weight: 600;
+      background-color: #01FF70;
+      margin-bottom: 30px; }
+
+@media only screen and (max-width: 600px) {
+  .product_list {
+    grid-template-columns: repeat(2, 1fr); } }
+
 * {
   box-sizing: border-box; }
+
+html,
+body {
+  height: 100%; }
 
 body {
   background-color: #fff;
@@ -105,8 +202,8 @@ body {
   line-height: 1.2;
   padding: 0;
   margin: 0;
-  width: 100%;
-  height: 100%; }
+  width: 100vw;
+  height: 100vh; }
 
 a {
   color: #fff; }
