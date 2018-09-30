@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', setMainMargins)
 
 navAddBike.addEventListener('click', toggleLogin)
 homeBtn.addEventListener('click', () => renderCards(bikeList))
-loginStatusBtn.addEventListener('click', logOut)
+loginStatusBtn.addEventListener('click', toggleLogin)
 
 
 // Displays the Login form
@@ -35,6 +35,8 @@ function toggleLogin(e) {
         // Places listener on login button to submit credentials
         const submitLoginBtn = document.querySelector('.login_form_submit')
         submitLoginBtn.addEventListener('click', submitData)
+    } else {
+        logOut()
     }
 }
 
