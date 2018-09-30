@@ -35,3 +35,11 @@ a {
     color: $main-light-color;
 }
 
+.error_message {
+    text-align: center;
+    vertical-align: middle;
+    font-size: $main-font-size;
+    font-weight: $medium-font-weight;
+    background: #e74c3c;
+    padding: 10px;
+}

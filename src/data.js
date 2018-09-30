@@ -50,3 +50,10 @@ const bikeList = [
         url: 'https://images.pexels.com/photos/545004/pexels-photo-545004.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'
     }  
 ]
+
+const users = [
+    {
+        username: 'admin',
+        password: 'admin'
+    },
+];

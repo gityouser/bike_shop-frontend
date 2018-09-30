@@ -138,7 +138,8 @@
     .login_container .login_wrapper .login_form input[type="submit"] {
       font-size: 12px;
       font-weight: 600;
-      background-color: #01FF70; }
+      background-color: #01FF70;
+      margin-top: 10px; }
     .login_container .login_wrapper .login_register_btn {
       color: #2ECC40; }
 
@@ -183,6 +184,7 @@
       font-size: 12px;
       font-weight: 600;
       background-color: #01FF70;
+      margin-top: 10px;
       margin-bottom: 30px; }
 
 @media only screen and (max-width: 600px) {
@@ -212,3 +214,11 @@ a {
   list-style: none;
   font-weight: 400;
   color: #fff; }
+
+.error_message {
+  text-align: center;
+  vertical-align: middle;
+  font-size: 12px;
+  font-weight: 600;
+  background: #e74c3c;
+  padding: 10px; }
