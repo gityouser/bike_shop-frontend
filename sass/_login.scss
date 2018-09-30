@@ -1,0 +1,51 @@
+.login_container {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 1fr 2fr 1fr;
+    grid-template-areas:
+    ". . ."
+    ". wrapper ."
+    ". . .";
+
+    .login_wrapper {
+        justify-self: center;
+        grid-area: wrapper;
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid black;
+        height: 400px;
+        width: 550px;
+    }
+}
+
+
+.login_wrapper > h1 {
+    grid-area: h1;
+    display: block;
+}
+
+.login_form {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    display: flex;
+
+}
+
+.login_form input {
+    width: 300px;
+    height: 40px;
+    margin-bottom: 5px;
+}
+
+.login_form input[type="text"], input[type="password"]{
+    padding: 10px;
+}
+
+actions {
+    display: flex;
+}

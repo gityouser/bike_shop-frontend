@@ -8,7 +8,7 @@
 .nav_list {
   display: grid;
   margin: 10 0;
-  grid-template-areas: "logo input home add contact";
+  grid-template-areas: "logo input home addBike contact";
   align-items: center;
   padding: 0; }
   .nav_list .logo {
@@ -25,8 +25,8 @@
     grid-area: home;
     justify-self: center;
     font-size: 12px; }
-  .nav_list .add {
-    grid-area: add;
+  .nav_list .addBike {
+    grid-area: addBike;
     justify-self: center;
     font-size: 12px; }
   .nav_list .login {
@@ -76,6 +76,10 @@
       text-overflow: ellipsis;
       overflow: hidden;
       white-space: nowrap; }
+
+@media only screen and (max-width: 600px) {
+  .product_list {
+    grid-template-columns: repeat(2, 1fr); } }
 
 .footer {
   position: fixed;

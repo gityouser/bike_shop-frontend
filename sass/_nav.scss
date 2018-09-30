@@ -12,7 +12,7 @@
     display: grid;
     margin: 10 0;
     grid-template-areas: 
-    "logo input home add contact";
+    "logo input home addBike contact";
     align-items: center;
     padding: 0;
 
@@ -37,8 +37,8 @@
         font-size: $main-font-size;
     }
 
-    .add {
-        grid-area: add;
+    .addBike {
+        grid-area: addBike;
         justify-self: center;
         font-size: $main-font-size;
     }

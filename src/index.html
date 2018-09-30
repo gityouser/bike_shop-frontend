@@ -14,8 +14,8 @@
                 <li class="nav_list_item logo list-item-style"><img src="http://michaelscycles-mn.com/wp-content/uploads/2015/09/BB-Logo-No-Background-300W.png" alt="logo"></li>
                 <li class="nav_list_item input list-item-style"><input type="text" placeholder="Search"></li>
                 <li class="nav_list_item home list-item-style"><a href="#">Home</a></li>
-                <li class="nav_list_item add list-item-style"><a href="#">Add bike</a></li>
-                <li class="nav_list_item login list-item-style"><a href="#">Login</a></li>
+                <li class="nav_list_item addBike list-item-style"><a class="addBike-btn" href="#">Add bike</a></li>
+                <li class="nav_list_item login list-item-style"><a class="nav_login-btn" href="#">Login</a></li>
             </ul>
         </nav>
     </header>
@@ -30,7 +30,24 @@
             <li class="footer_list_item footer_list_item-contact list-item-style"><a href="#">Contact</a></li>
         </ul>
     </footer>
+    <template id="login_template">
+        <div class="login_container">
+            <div class="login_wrapper">
+                <h1>Please Identify Yourself</h1>
+    
+                <form class="login_form" action="" method="post"> 
+                    <input type="text" name="username" id="username" placeholder="username">
+                    <input type="password" name="password" id="password" placeholder="password">
+                    <input type="submit" name="login" value="Log In">
+                    <div class="login_form_actions">
+                        
+                        Not registered? <a href="#">Create an account</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </template>
 </body>
-<script src='bikeList.js'></script>
+<script src='data.js'></script>
 <script src='main.js'></script>
 </html>
