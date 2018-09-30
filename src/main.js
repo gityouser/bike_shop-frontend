@@ -10,7 +10,7 @@ function setMainMargins() {
 }
 document.addEventListener('DOMContentLoaded', setMainMargins);
 
-function renderCatalog(bikes) {
+function renderCards(bikes) {
     const productList = document.querySelector('.product_list')
     const altImg = 'http://michaelscycles-mn.com/wp-content/uploads/2015/09/BB-Logo-No-Background-300W.png'
 
@@ -29,4 +29,4 @@ function renderCatalog(bikes) {
     }).join('')
 }
 
-renderCatalog(bikeList)
+renderCards(bikeList)
