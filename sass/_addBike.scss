@@ -1,0 +1,63 @@
+// @import '_variables';
+
+.addBike_container {
+    background: yellow;
+    width: 100vw;
+    height: 100%;
+    position: relative;
+    top: 0px;
+    bottom: 0px;
+    z-index: 100;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 1fr 2fr 1fr;
+    grid-template-areas:
+    ". . ."
+    ". wrapper ."
+    ". . .";
+
+    .addBike_wrapper {
+        justify-self: center;
+        grid-area: wrapper;
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+        box-shadow: $secondary-box-shadow;
+        padding: 0  40px;
+        background-color: $main-light-color-darker;
+
+        > h1 {
+            grid-area: h1;
+            font-size: $font-size-large;
+            font-weight: $medium-font-weight;
+        }
+
+        .addBike_form {
+            display: flex;
+            flex-direction: column;
+            width: 300px;
+            display: flex;
+        
+        }
+
+        .addBike_form input {
+        width: 90vw;
+        width: 300px;
+            height: 40px;
+            margin-bottom: 5px;
+        }
+        
+        .addBike_form input[type="text"], input[type="password"], input[type="email"]{
+            padding: 10px;
+        }
+
+        .addBike_form input[type="submit"] {
+            font-size: $main-font-size;
+            font-weight: $medium-font-weight;
+            background-color: #01FF70;
+            margin-top: 10px;
+            margin-bottom: 30px;
+        }
+    }
+}

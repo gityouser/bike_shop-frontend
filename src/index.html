@@ -11,7 +11,7 @@
     <header>
         <nav class="nav">
             <ul class="nav_list">
-                <li class="nav_list_item logo list-item-style"><img src="http://michaelscycles-mn.com/wp-content/uploads/2015/09/BB-Logo-No-Background-300W.png" alt="logo"></li>
+                <li class="nav_list_item logo list-item-style home-btn"><img src="http://michaelscycles-mn.com/wp-content/uploads/2015/09/BB-Logo-No-Background-300W.png" alt="logo"></li>
                 <li class="nav_list_item input list-item-style"><input type="text" placeholder="Search"></li>
                 <li class="nav_list_item home list-item-style"><a class="home-btn"  href="#">Home</a></li>
                 <li class="nav_list_item addBike list-item-style"><a class="addBike-btn" href="#">Add bike</a></li>
@@ -52,15 +52,27 @@
             <div class="form_wrapper signup_wrapper">
                 <h1>Sign Up</h1>
                 <form class="signup_form"> 
+                    <input type="text" id="username" placeholder="USERNAME">
                     <input type="text" id="firstname" placeholder="firstname">
-                    <input type="text" id="lastname" placeholder="lastname">
                     <input type="email" id="email" placeholder="email">
                     <input type="password" id="password" placeholder="password">
-                    <input type="submit" class="login_form_submit" value="Sign Up">
+                    <input type="submit" class="signup_form_submit" value="Sign Up">
                 </form>
             </div>
         </div>
     </template>
+    <template id="addBike_template">
+            <div class="form_container addBike_container">
+                <div class="form_wrapper addBike_wrapper">
+                    <h1>Add new bike</h1>
+                    <form class="addBike_form"> 
+                        <input type="text" id="bike-url" placeholder="Photo URL">
+                        <input type="text" id="title" placeholder="Title">
+                        <input type="submit" class="addBike_form_submit" value="Add bike">
+                    </form>
+                </div>
+            </div>
+        </template>
 </body>
 <script src='data.js'></script>
 <script src='main.js'></script>

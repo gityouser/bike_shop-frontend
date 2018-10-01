@@ -187,6 +187,51 @@
       margin-top: 10px;
       margin-bottom: 30px; }
 
+.addBike_container {
+  background: yellow;
+  width: 100vw;
+  height: 100%;
+  position: relative;
+  top: 0px;
+  bottom: 0px;
+  z-index: 100;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: 1fr 2fr 1fr;
+  grid-template-areas: ". . ." ". wrapper ." ". . ."; }
+  .addBike_container .addBike_wrapper {
+    justify-self: center;
+    grid-area: wrapper;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 1px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    padding: 0  40px;
+    background-color: #fafafa; }
+    .addBike_container .addBike_wrapper > h1 {
+      grid-area: h1;
+      font-size: 20px;
+      font-weight: 600; }
+    .addBike_container .addBike_wrapper .addBike_form {
+      display: flex;
+      flex-direction: column;
+      width: 300px;
+      display: flex; }
+    .addBike_container .addBike_wrapper .addBike_form input {
+      width: 90vw;
+      width: 300px;
+      height: 40px;
+      margin-bottom: 5px; }
+    .addBike_container .addBike_wrapper .addBike_form input[type="text"], .addBike_container .addBike_wrapper input[type="password"], .addBike_container .addBike_wrapper input[type="email"] {
+      padding: 10px; }
+    .addBike_container .addBike_wrapper .addBike_form input[type="submit"] {
+      font-size: 12px;
+      font-weight: 600;
+      background-color: #01FF70;
+      margin-top: 10px;
+      margin-bottom: 30px; }
+
 @media only screen and (max-width: 600px) {
   .product_list {
     grid-template-columns: repeat(2, 1fr); } }
