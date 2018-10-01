@@ -1,3 +1,12 @@
+// Users database
+const users = [
+    {
+        username: 'admin',
+        password: 'admin'
+    },
+]
+
+// Bikes database
 const bikeList = [
     {
         id: 1,
@@ -76,9 +85,3 @@ const bikeList = [
     },
 ]
 
-const users = [
-    {
-        username: 'admin',
-        password: 'admin'
-    },
-];
