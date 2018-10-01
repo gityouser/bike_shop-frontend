@@ -48,7 +48,32 @@ const bikeList = [
         id: 10,
         title: 'Specialised 22" frame',
         url: 'https://images.pexels.com/photos/545004/pexels-photo-545004.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'
-    }  
+    },
+    {
+        id: 11,
+        title: 'Cursiera Scott',
+        url: 'https://images.pexels.com/photos/127016/pexels-photo-127016.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'
+    },
+    {
+        id: 12,
+        title: 'Bicicleta Aluminiu',
+        url: 'https://images.pexels.com/photos/163329/bicycles-cycle-bike-wheel-163329.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'
+    },
+    {
+        id: 13,
+        title: 'Rugged Bike',
+        url: 'https://images.pexels.com/photos/145399/pexels-photo-145399.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'
+    },
+    {
+        id: 14,
+        title: 'Trocicleta',
+        url: 'https://images.pexels.com/photos/1268128/pexels-photo-1268128.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'
+    },
+    {
+        id: 54,
+        title: 'Roadster London',
+        url: 'https://images.pexels.com/photos/957157/pexels-photo-957157.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'
+    },
 ]
 
 const users = [

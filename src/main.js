@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
     searchBox.addEventListener('keyup', onSearchChange)
 })
 
-
+// Re-renders the cards with the filtered bikes
 function onSearchChange(e) {
     const searchedValue = e.target.value;
     const filteredBikes = bikeList.filter(bike => bike.title.toLowerCase().includes(searchedValue.toLowerCase()))
@@ -47,11 +47,13 @@ function pushBikeData(e) {
     validateSubmittedData(bikeData, form, e.target)
 }
 
+// Pushes to users array the signup object submitted by the user
 function pushUserData(data) {
     users.push(data)
     renderCards(bikeList)
 }
 
+//If user is logged in, it displays the add bike page, else - pops up the login page
 function addBike(e) {
     e.preventDefault()
     if (userLoggedIn) {
@@ -111,6 +113,7 @@ function submitDataForValidation(e) {
 
 }
 
+// Displays the Sign Up page
 function toggleSignupPage(e) {
     e.preventDefault()
     const signupClone = signupTemplate.cloneNode(true)
@@ -119,12 +122,15 @@ function toggleSignupPage(e) {
     signupBtn.addEventListener('click', submitDataForValidation)
 }
 
+// Displays the contact page
 function toggleContactPage(e) {
     e.preventDefault(e)
     const contactClone = contactTemplate.cloneNode(true)
     main.innerHTML = contactClone.innerHTML
 }
 
+// Validates the input received from login, signup and addBike forms.
+// Depending on the validation result, it can push the data to the data arrays, change the userLoggedIn state or display error messages, via displayErrorMessage.
 function validateSubmittedData(data, parentForm, targetButton) {
     // Check if it's signup data
     if (Object.keys(data).length === 4) {
@@ -159,6 +165,7 @@ function validateSubmittedData(data, parentForm, targetButton) {
     } 
 }
 
+// Displays a custome message, in a div, positioned before a refferenced element
 function displayErrorMessage(parentElement, refferenceElement, message) {
     const div = document.createElement('div')
     div.append(document.createTextNode(message))
@@ -192,7 +199,6 @@ function renderCards(bikes) {
       `
     }).join('')
 }
-
 renderCards(bikeList)
 
 function logOut() {
