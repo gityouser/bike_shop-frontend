@@ -4,3 +4,14 @@
         grid-template-columns: repeat(2, 1fr);
     }
 }
+
+.contact_container {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 
+    ". . ."
+    "wrapper wrapper wrapper"
+    "wrapper wrapper wrapper"
+    "wrapper wrapper wrapper"
+    ". . ."
+
+}

@@ -232,9 +232,44 @@
       margin-top: 10px;
       margin-bottom: 30px; }
 
+.contact_container {
+  background: #01FF70;
+  width: 100vw;
+  height: 100%;
+  position: relative;
+  top: 0px;
+  bottom: 0px;
+  z-index: 100;
+  display: grid;
+  grid-template-columns: 50px 1fr 1fr 1fr 50px;
+  grid-template-rows: 50px 1fr 1fr 1fr 50px;
+  grid-template-areas: ". .  . . ." ". wrapper wrapper wrapper . " ". wrapper wrapper wrapper . " ". wrapper wrapper wrapper . " ". .  . . ."; }
+  .contact_container .contact_wrapper {
+    width: 100%;
+    justify-self: center;
+    grid-area: wrapper;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    padding: 0  40px;
+    background-color: #0a0a0a; }
+    .contact_container .contact_wrapper > h1 {
+      grid-area: h1;
+      color: #01FF70;
+      font-size: 20px;
+      font-weight: 600; }
+    .contact_container .contact_wrapper > p {
+      color: #fff; }
+
 @media only screen and (max-width: 600px) {
   .product_list {
     grid-template-columns: repeat(2, 1fr); } }
+
+.contact_container {
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: ". . ." "wrapper wrapper wrapper" "wrapper wrapper wrapper" "wrapper wrapper wrapper" ". . ."; }
 
 * {
   box-sizing: border-box; }

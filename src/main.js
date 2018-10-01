@@ -2,24 +2,32 @@ const main = document.querySelector('#main')
 const headerHeight = document.getElementsByTagName('NAV')[0].offsetHeight
 const footerHeight = document.getElementsByTagName('FOOTER')[0].offsetHeight
 const homeButtons = document.querySelectorAll('.home-btn')
+const searchBox = document.querySelector('.searchBox')
+const contactBtn = document.querySelector('.contact_btn')
 const navAddBike = document.querySelector('.addBike-btn')
 const loginTemplate = document.querySelector('#login_template')
 const signupTemplate = document.querySelector('#signup_template')
 const addBikeTemplate = document.querySelector('#addBike_template')
+const contactTemplate = document.querySelector('#contact_template')
 const loginStatusBtn = document.querySelector('.loginStatus-btn')
 let userLoggedIn = false
 
-
-
-
+// Sets main content vertical margins and loads initial event listeners 
 document.addEventListener('DOMContentLoaded', () => {
     setMainMargins()
     navAddBike.addEventListener('click', addBike)
     homeButtons.forEach(homeBtn => homeBtn.addEventListener('click', () => renderCards(bikeList)))
-    loginStatusBtn.addEventListener('click', toggleLogin)
-
+    loginStatusBtn.addEventListener('click', toggleLoginPage)
+    contactBtn.addEventListener('click', toggleContactPage)
+    searchBox.addEventListener('keyup', onSearchChange)
 })
 
+
+function onSearchChange(e) {
+    const searchedValue = e.target.value;
+    const filteredBikes = bikeList.filter(bike => bike.title.toLowerCase().includes(searchedValue.toLowerCase()))
+    renderCards(filteredBikes)
+}
 
 // Sets main content's vertical margins so it doesn't go under the header and footer.
 function setMainMargins() {
@@ -53,18 +61,18 @@ function addBike(e) {
         addBikeBtn.addEventListener('click', pushBikeData)
         return;
     }
-    toggleLogin(e)
+    toggleLoginPage(e)
 }
 
 // Displays the Login form
-function toggleLogin(e) {
+function toggleLoginPage(e) {
     e.preventDefault()
     if (!userLoggedIn) {
         const loginClone = loginTemplate.cloneNode(true)
         main.innerHTML = loginClone.innerHTML
         // Places listener on the 'Create an account' button
         const signupBtn = document.querySelector('.login_register_btn')
-        signupBtn.addEventListener('click', toggleSignup)
+        signupBtn.addEventListener('click', toggleSignupPage)
 
         // Places listener on login button to submit credentials
         const submitLoginBtn = document.querySelector('.login_form_submit')
@@ -103,16 +111,18 @@ function submitDataForValidation(e) {
 
 }
 
-function toggleSignup(e) {
+function toggleSignupPage(e) {
     e.preventDefault()
     const signupClone = signupTemplate.cloneNode(true)
     main.innerHTML = signupClone.innerHTML
     const signupBtn = document.querySelector('.signup_form_submit')
-    signupBtn.addEventListener('click', signUp)
+    signupBtn.addEventListener('click', submitDataForValidation)
 }
 
-function signUp(e) {
-    submitDataForValidation(e)
+function toggleContactPage(e) {
+    e.preventDefault(e)
+    const contactClone = contactTemplate.cloneNode(true)
+    main.innerHTML = contactClone.innerHTML
 }
 
 function validateSubmittedData(data, parentForm, targetButton) {
@@ -128,8 +138,8 @@ function validateSubmittedData(data, parentForm, targetButton) {
     }
     // Check if it's login data
     else if ('username' in data) {
-        console.log(data.username)
         const index = users.findIndex(user => user.username === data.username && user.password === data.password)
+
         if(index !== -1) { 
                 userLoggedIn = true
                 renderCards(bikeList)

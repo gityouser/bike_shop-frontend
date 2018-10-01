@@ -12,7 +12,7 @@
         <nav class="nav">
             <ul class="nav_list">
                 <li class="nav_list_item logo list-item-style home-btn"><img src="http://michaelscycles-mn.com/wp-content/uploads/2015/09/BB-Logo-No-Background-300W.png" alt="logo"></li>
-                <li class="nav_list_item input list-item-style"><input type="text" placeholder="Search"></li>
+                <li class="nav_list_item input list-item-style"><input class="searchBox" type="text" placeholder="Search"></li>
                 <li class="nav_list_item home list-item-style"><a class="home-btn"  href="#">Home</a></li>
                 <li class="nav_list_item addBike list-item-style"><a class="addBike-btn" href="#">Add bike</a></li>
                 <li class="nav_list_item login list-item-style"><a class="loginStatus-btn" href="#">Login</a></li>
@@ -29,7 +29,7 @@
     <footer class="footer">
         <ul class="footer_list">
             <li class="footer_list_item footer_list_item-copyright list-item-style">© 2018 Behind bars</li>
-            <li class="footer_list_item footer_list_item-contact list-item-style"><a href="#">Contact</a></li>
+            <li class="footer_list_item footer_list_item-contact list-item-style"><a href="#" class="contact_btn">Contact</a></li>
         </ul>
     </footer>
     <template id="login_template">
@@ -62,16 +62,31 @@
         </div>
     </template>
     <template id="addBike_template">
-            <div class="form_container addBike_container">
-                <div class="form_wrapper addBike_wrapper">
-                    <h1>Add new bike</h1>
-                    <form class="addBike_form"> 
-                        <input type="text" id="bike-url" placeholder="Photo URL">
-                        <input type="text" id="title" placeholder="Title">
-                        <input type="submit" class="addBike_form_submit" value="Add bike">
-                    </form>
-                </div>
+        <div class="form_container addBike_container">
+            <div class="form_wrapper addBike_wrapper">
+                <h1>Add new bike</h1>
+                <form class="addBike_form"> 
+                    <input type="text" id="bike-url" placeholder="Photo URL">
+                    <input type="text" id="title" placeholder="Title">
+                    <input type="submit" class="addBike_form_submit" value="Add bike">
+                </form>
             </div>
+        </div>
+    </template>
+    <template id="contact_template">
+        <div class="contact_container">
+            <div class="contact_wrapper">
+                <h1>Contact Us</h1>
+                <p>
+                    UK Limited
+                    50 Liverpool Street
+                    EC2M 7PY London
+                    United Kingdom
+                </p>
+                <a href="mailto:info@behindbars.biz">info@behindbars.biz</a>
+                <a href="tel:+44 20 37137500">+44 20 37137500</a>
+            </div>
+        </div>
         </template>
 </body>
 <script src='data.js'></script>
